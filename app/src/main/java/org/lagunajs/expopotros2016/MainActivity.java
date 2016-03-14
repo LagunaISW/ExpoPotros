@@ -130,15 +130,16 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
 
             //  Toast.makeText(getApplicationContext(), wid+""+hgt, Toast.LENGTH_SHORT).show();
             Bitmap newImage = Bitmap.createBitmap
-                    (wid, hgt, Bitmap.Config.ARGB_8888);
+                    (wid, hgt, Bitmap.Config.RGB_565);
 
             Canvas canvas = new Canvas(newImage);
 
             canvas.drawBitmap(cameraBitmap, 0f, 0f, null);
 
             Drawable drawable = getResources().getDrawable
-                    (R.drawable.geek);
-            drawable.setBounds(20, 30, drawable.getIntrinsicWidth()+20, drawable.getIntrinsicHeight()+30);
+                    (R.drawable.marco440);
+            drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+
             drawable.draw(canvas);
 
 
@@ -153,7 +154,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
             try
             {
                 FileOutputStream out = new FileOutputStream(myImage);
-                newImage.compress(Bitmap.CompressFormat.JPEG, 100, out);
+                newImage.compress(Bitmap.CompressFormat.PNG, 100, out);
                 ContentValues values = new ContentValues();
 
                 values.put(MediaStore.Images.Media.DATE_TAKEN, System.currentTimeMillis());
@@ -204,8 +205,10 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
         try
         {
             Camera.Parameters parameters = camera.getParameters();
-            parameters.setPreviewSize(640, 480);
-            parameters.setPictureSize(640, 480);
+            //parameters.setPreviewSize(640, 480);
+            parameters.setPreviewSize(1280,720);
+            //parameters.setPictureSize(640, 480);
+            parameters.setPictureSize(1280,720);
             if (this.getResources().getConfiguration().orientation != Configuration.ORIENTATION_LANDSCAPE) {
                 camera.setDisplayOrientation(90);
 
