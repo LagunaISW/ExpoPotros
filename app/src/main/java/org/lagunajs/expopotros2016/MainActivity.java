@@ -137,7 +137,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
             canvas.drawBitmap(cameraBitmap, 0f, 0f, null);
 
             Drawable drawable = getResources().getDrawable
-                    (R.drawable.marco440);
+                    (R.drawable.marco4402);
             drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
 
             drawable.draw(canvas);

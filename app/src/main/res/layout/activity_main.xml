@@ -27,7 +27,7 @@
                 android:id="@+id/imageView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/marco1280"
+                android:src="@drawable/marco12802"
                 android:layout_alignParentTop="false"
                 android:layout_marginLeft="-80dp"
                 android:layout_marginRight="-80dp"

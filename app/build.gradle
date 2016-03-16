@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "org.lagunajs.expopotros2016"
+        applicationId "org.lagunajs.expopotros20162"
         minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
